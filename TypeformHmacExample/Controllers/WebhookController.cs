@@ -48,8 +48,7 @@ public class WebhookController : ControllerBase
             });
             logs.Add($"obj: {obj} - {JsonSerializer.Serialize(obj)}");
 
-
-            return Ok(new { Success = true });
+            return Ok(new { Success = true, GeneratedSIgn = generatedSig });
 
         }
         catch (Exception ex)
